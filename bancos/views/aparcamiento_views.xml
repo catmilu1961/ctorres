@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="aparcamiento_view_list">
+            <field name="name">garaje.aparcamiento.list</field>
+            <field name="model">garaje.aparcamiento</field>
+            <field name="arch" type="xml">
+                <tree string="Lista de Parqueos">
+                    <field name="name"/>
+                    <field name="plazas"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="aparcamiento_view_form">
+            <field name="name">garaje.aparcamiento.form</field>
+            <field name="model">garaje.aparcamiento</field>
+            <field name="arch" type="xml">
+                <form string="Datos de Parqueos">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="plazas"/>
+                            </group>
+                        </group>
+                    </sheet>
+<!--
+                    <notebook>
+                        <page string="Descripcion">
+                            <field name="descripcion"/>
+                        </page>
+                        <page string="Vehiculos">
+                            <field name="coche_ids"/>
+                        </page> 
+                    </notebook>
+-->
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="aparcamiento_view_search">
+            <field name="name">garaje.aparcamiento.search</field>
+            <field name="model">garaje.aparcamiento</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                </search>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="operacion_view_list">
+            <field name="name">banco.operacion.list</field>
+            <field name="model">banco.operacion</field>
+            <field name="arch" type="xml">
+               <tree string="Operaciones Bancos" class="./static/src/css/std_tree_view">
+                   <field name="idoperacion"/>
+                   <field name="descripcion"/>
+                   <field name="operacion"/>
+                   <field name="estado"/>
+               </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="operacion_view_form">
+            <field name="name">banco.operacion.form</field>
+            <field name="model">banco.operacion</field>
+            <field name="arch" type="xml">
+                <form> 
+                    <sheet style="width:50%%">
+                        <group>
+                            <separator string="Informacion de Operaciones Bancarias"/>
+                            <group style="width:100%%">
+                                <field name="idoperacion"/>
+                                <field name="descripcion"/>
+                                <field name="operacion"/>
+                                <field name="estado"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="operacion_view_search">
+            <field name="name">banco.operacion.search</field>
+            <field name="model">banco.operacion</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="descripcion"/>
+                </search>
+            </field>
+        </record>
+    </data>
+<!--
+XML
+<tree editable="bottom" class="helpdesk_line_col">
+    <field name="product_id"/>
+    <field name="hardware"/>
+    <field name="firmware"/>
+    <field name="comments"/>
+</tree>
+
+CSS
+
+.helpdesk_line_col [data-id="product_id"]{width: 30%;}
+.helpdesk_line_col [data-id="hardware"]{width: 10%;}
+.helpdesk_line_col [data-id="firmware"]{width: 10%;}
+.helpdesk_line_col [data-id="comments"]{width: 50%;}
+
+The workaround I found
+
+xml : <tree string="Tree String" version="7.0" class="my_class"> <field name="my_field" />
+css : .my_class [data-id="my_field"]{width: 1000px;}
+-->
+</odoo>

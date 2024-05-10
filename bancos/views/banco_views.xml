@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="banco_view_list">
+            <field name="name">banco.bancos.list</field>
+            <field name="model">banco.bancos</field>
+            <field name="arch" type="xml">
+                <tree string="Lista de Bancos" class="std_tree_view">
+                    <field name="idbanco"/>
+                    <field name="descripcion"/>
+                    <field name="estado"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="banco_view_form">
+            <field name="name">banco.bancos.form</field>
+            <field name="model">banco.bancos</field>
+            <field name="arch" type="xml">
+                <form class="std_tree_view"> 
+                    <sheet style="width:50%%">
+                        <group>
+                            <separator string="Informacion de Bancos"/>
+                            <group style="width:100%%">
+                                <field name="idbanco" style="background-color:Gainsboro;font-size:15px;color:DarkBlue;width=25px" placeholder="Sigla"/>
+                                <field name="descripcion" style="background-color:LightGray;font-size:15px;color:DarkBlue;" placeholder="Nombre del Banco"/>
+                                <field name="estado"/>
+                            </group>
+                        </group>
+                   </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="banco_view_search">
+            <field name="name">banco.bancos.search</field>
+            <field name="model">banco.bancos</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="descripcion"/>
+                </search>
+            </field>
+        </record>
+<!--
+        <record model="ir.ui.view" id="course_view_pivot">
+            <field name="name">academy.course.pivot</field>
+            <field name="model">academy.course</field>
+            <field name="arch" type="xml">
+                <pivot>
+                    <field name="level" type="row"/>
+                    <field name="name" type="row"/>
+                    <field name="base_price" type="measure"/>
+                    <field name="additional_fee" type="measure"/>
+                    <field name="total_price" type="measure"/>
+                </pivot>
+            </field>
+        </record>
+-->        
+    </data>
+</odoo>

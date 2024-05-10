@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="persona_view_list">
+            <field name="name">banco.persona.list</field>
+            <field name="model">banco.persona</field>
+            <field name="arch" type="xml">
+               <tree string="Catalogo de Personas">
+                   <field name="dpi"/>
+                   <field name="nombres"/>
+                   <field name="sexo"/>
+                   <field name="edad"/>
+                   <field name="estado"/>
+               </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="persona_view_form">
+            <field name="name">banco.persona.form</field>
+            <field name="model">banco.persona</field>
+            <field name="arch" type="xml">
+                <form> 
+                    <sheet style="width:50%%">
+                        <group>
+                            <separator string="Informacion de Personas"/>
+                            <group style="width:100%%">
+                                <field name="dpi"/>
+                                <field name="nombres"/>
+                                <field name="sexo"/>
+                                <field name="edad"/>
+                                <field name="estado"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="persona_view_search">
+            <field name="name">banco.persona.search</field>
+            <field name="model">banco.persona</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="nombres"/>
+                </search>
+            </field>
+        </record>
+    </data>
+</odoo>

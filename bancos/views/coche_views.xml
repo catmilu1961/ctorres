@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="coche_view_list">
+            <field name="name">garaje.coche.list</field>
+            <field name="model">garaje.coche</field>
+            <field name="arch" type="xml">
+                <tree string="Lista de Vehiculos">
+                    <field name="name"/>
+                    <field name="modelo"/>
+                    <field name="construido"/>
+                    <field name="consumo"/>
+                    <field name="annos"/>
+                    <field name="descripcion"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="coche_view_form">
+            <field name="name">garaje.coche.form</field>
+            <field name="model">garaje.coche</field>
+            <field name="arch" type="xml">
+                <form string="Datos de Vehiculos">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="modelo"/>
+                                <field name="construido"/>
+                                <field name="consumo"/>
+                                <field name="annos"/>
+                                <field name="descripcion"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="coche_view_search">
+            <field name="name">garaje.coche.search</field>
+            <field name="model">garaje.coche</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="descripcion"/>
+                </search>
+            </field>
+        </record>
+        
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+banco_admin,Banco Admin,model_banco_bancos,group_banco_admin,1,1,1,1
+banco_usuario,Banco Read All,model_banco_bancos,,1,0,0,0
+persona_admin,Persona Admin,model_banco_persona,group_banco_admin,1,1,1,1
+persona_usuario,Persona Read all,model_banco_persona,,1,0,0,0
+cuenta_admin,Cuenta Admin,model_banco_cuenta,group_banco_admin,1,1,1,1
+cuenta_usuario,Cuenta Read all,model_banco_cuenta,,1,0,0,0
+operacion_admin,Operacion Admin,model_banco_operacion,group_banco_admin,1,1,1,1
+operacion_usuario,Operacion Read all,model_banco_operacion,,1,0,0,0
+bancos.access_garaje_aparcamiento,access_garaje_aparcamiento,bancos.model_garaje_aparcamiento,base.group_user,1,1,1,1
+bancos.access_garaje_coche,access_garaje_coche,bancos.model_garaje_coche,base.group_user,1,1,1,1
+bancos.access_garaje_mantenimiento,access_garaje_mantenimiento,bancos.model_garaje_mantenimiento,base.group_user,1,1,1,1
